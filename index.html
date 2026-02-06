@@ -7,82 +7,296 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- 固定顶部导航栏 -->
+    <nav class="top-nav">
+        <div class="container">
+            <div class="nav-logo">🏪 宝珍食杂店</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#products" class="nav-link">商品分类</a></li>
+                <li><a href="#about" class="nav-link">关于我们</a></li>
+                <li><a href="#contact" class="nav-link">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner 区域 -->
+    <header id="home">
         <div class="container">
             <div class="logo-area">
                 <div class="logo-placeholder">🏪</div>
             </div>
             <h1 class="store-name">宝珍食杂店</h1>
             <p class="tagline">诚信经营，货品齐全</p>
+            <div class="promo-banner">
+                <p class="promo-text">🎉 新店开业，全场8折 🎉</p>
+                <button class="cta-button">立即选购</button>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="intro">
+        <!-- 介绍区域 -->
+        <section class="intro" id="about">
             <h2>欢迎光临</h2>
             <p>宝珍食杂店是您身边值得信赖的购物伙伴。我们秉承诚信经营的理念，为社区居民提供优质、新鲜的商品。</p>
             <p>从日常生活必需品到特色食材，我们的货品种类齐全，价格实惠，让您购物无忧。</p>
         </section>
 
-        <section class="products">
-            <h2>精选商品</h2>
+        <!-- 店铺优势区域 -->
+        <section class="advantages">
+            <h2>店铺优势</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">✓</div>
+                    <h3>正品保障</h3>
+                    <p>所有商品来源可靠<br>品质有保证</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🚚</div>
+                    <h3>新鲜直达</h3>
+                    <p>每日新鲜配送<br>保证食材新鲜</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💰</div>
+                    <h3>价格实惠</h3>
+                    <p>社区平价超市<br>天天低价</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💝</div>
+                    <h3>贴心服务</h3>
+                    <p>热情周到服务<br>顾客至上</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新活动/公告区域 -->
+        <section class="announcements">
+            <h2>最新活动</h2>
+            <div class="announcements-grid">
+                <div class="announcement-card">
+                    <div class="announcement-badge">HOT</div>
+                    <h3>周末特惠</h3>
+                    <p>每周六日全场水果蔬菜9折优惠！新鲜看得见，实惠买得到！</p>
+                    <span class="announcement-date">活动时间：每周末</span>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-badge">NEW</div>
+                    <h3>会员日折扣</h3>
+                    <p>每月18日会员日，会员专享8.5折，累计消费还有积分赠送！</p>
+                    <span class="announcement-date">活动时间：每月18日</span>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-badge">🎁</div>
+                    <h3>满减活动</h3>
+                    <p>单次购物满50元减5元，满100元减12元，满200元减30元！</p>
+                    <span class="announcement-date">长期有效</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 商品分类区域 -->
+        <section class="products" id="products">
+            <h2>商品分类</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">🍎</div>
                     <h3 class="product-name">新鲜水果</h3>
                     <p class="product-desc">当季水果，新鲜到店</p>
                     <p class="product-price">¥15-30/斤</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🥛</div>
                     <h3 class="product-name">乳制品</h3>
                     <p class="product-desc">优质牛奶，营养健康</p>
                     <p class="product-price">¥8-25/件</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🍚</div>
                     <h3 class="product-name">米面粮油</h3>
                     <p class="product-desc">精选优质，品质保证</p>
                     <p class="product-price">¥50-120/袋</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🥫</div>
                     <h3 class="product-name">罐头调料</h3>
                     <p class="product-desc">种类齐全，方便快捷</p>
                     <p class="product-price">¥5-20/瓶</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🍞</div>
                     <h3 class="product-name">面包糕点</h3>
                     <p class="product-desc">每日新鲜出炉</p>
                     <p class="product-price">¥6-18/个</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
                 <div class="product-card">
                     <div class="product-image">🧴</div>
                     <h3 class="product-name">日用百货</h3>
                     <p class="product-desc">生活必需品应有尽有</p>
                     <p class="product-price">¥3-50/件</p>
+                    <button class="view-more-btn">查看更多</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍺</div>
+                    <h3 class="product-name">酒水饮料</h3>
+                    <p class="product-desc">品种丰富，冰镇清爽</p>
+                    <p class="product-price">¥3-50/瓶</p>
+                    <button class="view-more-btn">查看更多</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍿</div>
+                    <h3 class="product-name">休闲零食</h3>
+                    <p class="product-desc">美味零食，休闲时光</p>
+                    <p class="product-price">¥5-35/包</p>
+                    <button class="view-more-btn">查看更多</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧹</div>
+                    <h3 class="product-name">生活日用</h3>
+                    <p class="product-desc">家居必备，品质优选</p>
+                    <p class="product-price">¥8-60/件</p>
+                    <button class="view-more-btn">查看更多</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🍖</div>
+                    <h3 class="product-name">冷冻食品</h3>
+                    <p class="product-desc">速冻方便，营养美味</p>
+                    <p class="product-price">¥12-45/包</p>
+                    <button class="view-more-btn">查看更多</button>
                 </div>
             </div>
         </section>
 
+        <!-- 热销商品区域 -->
+        <section class="hot-products">
+            <h2>🔥 热销商品</h2>
+            <div class="hot-products-grid">
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🍎</div>
+                    <h3 class="hot-product-name">红富士苹果</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥16.8</span>
+                        <span class="hot-original-price">¥24.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🥛</div>
+                    <h3 class="hot-product-name">特仑苏纯牛奶</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥52.0</span>
+                        <span class="hot-original-price">¥65.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🍚</div>
+                    <h3 class="hot-product-name">五常大米</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥88.0</span>
+                        <span class="hot-original-price">¥110.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🍞</div>
+                    <h3 class="hot-product-name">全麦面包</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥12.8</span>
+                        <span class="hot-original-price">¥16.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🍺</div>
+                    <h3 class="hot-product-name">雪花啤酒</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥38.0</span>
+                        <span class="hot-original-price">¥48.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+                <div class="hot-product-card">
+                    <div class="hot-badge">热卖</div>
+                    <div class="hot-product-image">🍿</div>
+                    <h3 class="hot-product-name">薯片礼包</h3>
+                    <div class="hot-product-pricing">
+                        <span class="hot-current-price">¥28.0</span>
+                        <span class="hot-original-price">¥35.0</span>
+                    </div>
+                    <button class="buy-now-btn">立即抢购</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 顾客好评区域 -->
         <section class="reviews">
             <h2>顾客好评</h2>
             <div class="reviews-grid">
                 <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">👩</div>
+                        <div class="reviewer-details">
+                            <p class="reviewer-name">张女士</p>
+                            <p class="review-date">2026-01-15</p>
+                        </div>
+                    </div>
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"老板人很好，东西质量也不错，经常来买！"</p>
-                    <p class="review-author">— 张女士</p>
+                    <p class="review-text">"老板人很好，东西质量也不错，经常来买！服务态度特别好，值得推荐。"</p>
                 </div>
                 <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">👨</div>
+                        <div class="reviewer-details">
+                            <p class="reviewer-name">李先生</p>
+                            <p class="review-date">2026-01-20</p>
+                        </div>
+                    </div>
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"价格实惠，货品新鲜，离家又近，很方便。"</p>
-                    <p class="review-author">— 李先生</p>
+                    <p class="review-text">"价格实惠，货品新鲜，离家又近，很方便。店里东西齐全，不用跑远路。"</p>
                 </div>
                 <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">👵</div>
+                        <div class="reviewer-details">
+                            <p class="reviewer-name">王阿姨</p>
+                            <p class="review-date">2026-01-25</p>
+                        </div>
+                    </div>
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"诚信经营，童叟无欺，值得信赖的好店！"</p>
-                    <p class="review-author">— 王阿姨</p>
+                    <p class="review-text">"诚信经营，童叟无欺，值得信赖的好店！买了这么多年一直很放心。"</p>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">👴</div>
+                        <div class="reviewer-details">
+                            <p class="reviewer-name">陈大爷</p>
+                            <p class="review-date">2026-01-28</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"社区好店，商品质量有保障，价格公道。老板热情周到，我们老年人很信任。"</p>
+                </div>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">👧</div>
+                        <div class="reviewer-details">
+                            <p class="reviewer-name">小美</p>
+                            <p class="review-date">2026-02-01</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"水果蔬菜都很新鲜，零食种类也多。周末活动很给力，经常能淘到好东西！"</p>
                 </div>
             </div>
         </section>
@@ -161,11 +375,92 @@
         </section>
     </main>
 
-    <footer>
+    <!-- 优化后的页脚 -->
+    <footer id="contact">
         <div class="container">
-            <p>&copy; 2026 宝珍食杂店 版权所有</p>
-            <p>用心服务每一位顾客</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#products">商品分类</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>📍 XX省XX市XX区XX街道XX号</p>
+                    <p>📞 123-4567-8910</p>
+                    <p>✉️ contact@baozhen.store</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="微信">💬</a>
+                        <a href="#" class="social-icon" title="微博">🐦</a>
+                        <a href="#" class="social-icon" title="抖音">🎵</a>
+                        <a href="#" class="social-icon" title="小红书">📖</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 宝珍食杂店 版权所有</p>
+                <p>用心服务每一位顾客</p>
+            </div>
         </div>
     </footer>
+
+    <!-- JavaScript for smooth scrolling and animations -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('.top-nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Call-to-action button
+        document.querySelector('.cta-button')?.addEventListener('click', () => {
+            document.querySelector('#products').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
