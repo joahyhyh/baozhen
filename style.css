@@ -25,6 +25,49 @@ header {
     padding: 60px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: headerFade 1s ease-in;
+}
+
+@keyframes headerFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-area {
+    margin-bottom: 20px;
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo-placeholder {
+    font-size: 5rem;
+    background: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-placeholder:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .store-name {
@@ -51,6 +94,18 @@ section {
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 section h2 {
@@ -144,6 +199,264 @@ section h2 {
     font-size: 1rem;
 }
 
+/* 商品展示区域 */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ffa07a;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: cardFadeIn 0.6s ease-out;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+}
+
+.product-image {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.product-card:hover .product-image {
+    animation: spin 0.6s ease;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.product-name {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-desc {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #ff6b6b;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 顾客评价区域 */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.review-card {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 4px solid #ff6b6b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.review-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.review-stars {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #ffa07a;
+}
+
+.review-text {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.review-author {
+    color: #666;
+    font-size: 0.95rem;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* 微信二维码区域 */
+.wechat-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.qr-code-area {
+    flex-shrink: 0;
+}
+
+.qr-placeholder {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border: 3px solid #ffa07a;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+    }
+}
+
+.qr-placeholder:hover {
+    transform: rotate(5deg);
+}
+
+.qr-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.qr-placeholder p {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.wechat-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.wechat-text p {
+    color: #333;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    border-left: 3px solid #ffa07a;
+}
+
+/* 地图位置区域 */
+.map-container {
+    margin-top: 20px;
+}
+
+.map-placeholder {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border: 2px solid #ffa07a;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.map-placeholder:hover {
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.2);
+}
+
+.map-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: mapPulse 2s ease-in-out infinite;
+}
+
+@keyframes mapPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.map-placeholder p {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.map-address {
+    color: #666 !important;
+    font-size: 1.1rem !important;
+    margin-top: 15px !important;
+}
+
 /* 页脚样式 */
 footer {
     background: #333;
@@ -176,6 +489,12 @@ footer p:last-child {
         font-size: 1rem;
     }
 
+    .logo-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+    }
+
     section {
         padding: 20px;
     }
@@ -191,12 +510,45 @@ footer p:last-child {
     .contact-info {
         grid-template-columns: 1fr;
     }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .product-image {
+        font-size: 3rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wechat-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .map-placeholder {
+        padding: 40px 20px;
+        min-height: 250px;
+    }
 }
 
 /* 响应式设计 - 手机设备 */
 @media (max-width: 480px) {
     header {
         padding: 40px 20px;
+    }
+
+    .logo-placeholder {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+
+    .logo-area {
+        margin-bottom: 15px;
     }
 
     .store-name {
@@ -233,5 +585,66 @@ footer p:last-child {
 
     .contact-item .icon {
         font-size: 2.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product-card {
+        padding: 15px;
+    }
+
+    .product-image {
+        font-size: 3rem;
+    }
+
+    .product-name {
+        font-size: 1.1rem;
+    }
+
+    .product-price {
+        font-size: 1.2rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .qr-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    .qr-icon {
+        font-size: 3rem;
+    }
+
+    .wechat-text p {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+
+    .map-placeholder {
+        padding: 30px 15px;
+        min-height: 200px;
+    }
+
+    .map-icon {
+        font-size: 4rem;
+    }
+
+    .map-placeholder p {
+        font-size: 1.1rem;
+    }
+
+    .map-address {
+        font-size: 0.95rem !important;
     }
 }
